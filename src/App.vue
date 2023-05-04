@@ -1,26 +1,48 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Navbar />
+    <Hero />
+    <Feature />
+    <Extention />
+    <Frequent />
+    <Contact />
+    <Footer />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from './components/Navbar.vue';
+import Hero from './components/Hero.vue';
+import Feature from './components/Feature.vue';
+import Extention from './components/Extention.vue';
+import Frequent from './components/Frequent.vue';
+import Contact from './components/Contact.vue';
+import Footer from './components/Footer.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    Navbar,
+    Hero,
+    Feature,
+    Extention,
+    Frequent,
+    Contact,
+    Footer,
+  },
+  data() {
+    return {
+      users: [
+        {
+          name: 'azeez',
+          age: 20,
+        },
+        {
+          name: 'osinachi',
+          age: 19,
+        },
+      ],
+    };
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
